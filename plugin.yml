@@ -1,1 +1,26 @@
+name: SocialSpy
+main: SocialSpy/SocialSpy
+version: "1.0.0"
+api: ["3.0.0-ALPHA7"]
+author: ggomezz
+description: Useful 'spy' commands for Admins
 
+commands:
+ snoop:
+  description: See commands tha players are running
+ invsee:
+  aliases: ['isee']
+  description: See a players inventory
+
+permissions:
+ socialspy:
+  description: SocialSpy global permission
+  default: op
+  
+children:
+   socialspy.snoop:
+    description: Allow to use '/snoop'
+    default: op
+   socialspy.invsee:
+    description: Allow to see other players' inventory
+    default: op
