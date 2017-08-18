@@ -14,7 +14,22 @@ class Main extends PluginBase{
        
     }
     
-    public function onDisable(){
+  public function onDisable(){
         
     }  
+  public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{				
+		if(strtolower($cmd->getName()) == "snoop") {
+		 	if($sender instanceof Player) {
+				if($sender->hasPermission("snoop.command")) {
+					///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          
+          
+          
+          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				}
+			}
+		}
+               
+	}
+  
 }
