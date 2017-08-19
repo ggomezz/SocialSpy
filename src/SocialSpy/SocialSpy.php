@@ -2,6 +2,7 @@
 
 namespace SocialSpy;
 
+use SocialSpy\EventListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\command\Command;
