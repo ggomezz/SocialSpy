@@ -15,10 +15,14 @@ class SnoopCommand implements CommandExecutor{
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-      if($this->plugin->isAuthorized($sender)){
-
+      if(!$this->plugin->isAuthorized($sender)){
+        $this->plugin->authorize($sender)
         return true;
-      }  
+      } 
+      else{
+        $this->plugin->deauthorize($sender)
+        return true;
+      }
     }
   
 }
