@@ -15,6 +15,7 @@ use pocketmine\event\inventory\InventoryPickupItemEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\command\CommandSender;
 use SocialSpy\SocialSpy;
 
 class EventListener extends PluginBase implements Listener{
