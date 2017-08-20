@@ -8,18 +8,16 @@ use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
+//use pocketmine\event\inventory\InventoryCloseEvent;
+use pocketmine\event\player\PlayerDropItemEvent;
+use pocketmine\event\inventory\InventoryPickupItemEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\player\PlayerInteractEvent;
 use SocialSpy\SocialSpy;
 
 class EventListener extends PluginBase implements Listener{
-  
-        public function onArmorChange(EntityArmorChangeEvent $event) {
-                if(($player = $event->getEntity()) instanceof Player) {
-                        if($this->plugin->isViewing($player->getName())) {
-                                $event->setCancelled(true);
-                                $player->sendMessage(TF::RED . "You can't change you armor while viewing a players inventory!");
-                        }
-                }
-        }
+  github
         public function onDrop(PlayerDropItemEvent $event) {
                 $player = $event->getPlayer();
                 if($this->plugin->isViewing($player->getName())) {
@@ -36,16 +34,7 @@ class EventListener extends PluginBase implements Listener{
                         }
                 }
         }
-        
-        public function onArrowPickup(InventoryPickupArrowEvent $event) {
-                if(($player = $event->getInventory()->getHolder()) instanceof Player) {
-                        if($this->plugin->isViewing($player->getName())) {
-                                $event->setCancelled(true);
-                                $player->sendMessage(TF::RED . "You can't pick up arrows while viewing a players inventory!");
-                        }
-                }
-        }
-        
+
         public function onBlockPlace(BlockPlaceEvent $event) {
                 $player = $event->getPlayer();
                 if($this->plugin->isViewing($player->getName())) {
