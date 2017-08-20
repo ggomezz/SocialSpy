@@ -71,6 +71,10 @@ class SocialSpy extends PluginBase implements Listener{
                         }
                 }
         }
+        
+         public function onQuit(PlayerQuitEvent $event){
+            $this->plugin->deauthorize($event->getPlayer());
+          }
   
        public function onPlayerCmd(PlayerCommandPreprocessEvent $event) {
                   $sender = $event->getPlayer();
