@@ -67,34 +67,34 @@ class EventListener extends PluginBase implements Listener{
             $this->plugin->deauthorize($event->getPlayer());
           }
   
-       public function onPlayerCmd(PlayerCommandPreprocessEvent $event) {
-                  $sender = $event->getPlayer();
-                  $msg = $event->getMessage();
+         public function onPlayerCmd(PlayerCommandPreprocessEvent $event) {
+                    $sender = $event->getPlayer();
+                    $msg = $event->getMessage();
 
-                  if($this->getPlugin()->cfg->get("Console.Logger") == "true") {
-                    if($msg[0] == "/") {
-                      if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-                        $this->getPlugin()->getLogger()->info($sender->getName() . "> §4Hidden for security reasons");	
-                      } else {
-                        $this->getPlugin()->getLogger()->info($sender->getName() . "> " . $msg);
+                    if($this->getPlugin()->cfg->get("Console.Logger") == "true") {
+                      if($msg[0] == "/") {
+                        if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
+                          $this->getPlugin()->getLogger()->info($sender->getName() . "> §4Hidden for security reasons");	
+                        } else {
+                          $this->getPlugin()->getLogger()->info($sender->getName() . "> " . $msg);
+                        }
+
                       }
-
                     }
-                  }
 
-                    if(!empty($this->getPlugin()->authorized)) {
-                      foreach($this->getPlugin()->authorized as $snooper) {
-                         if($msg[0] == "/") {
-                          if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
-                            $snooper->sendMessage($sender->getName() . "> §4Hidden for security reasons");	
-                          } else {
-                            $snooper->sendMessage($sender->getName() . "> " . $msg);
+                      if(!empty($this->getPlugin()->authorized)) {
+                        foreach($this->getPlugin()->authorized as $snooper) {
+                           if($msg[0] == "/") {
+                            if(stripos($msg, "login") || stripos($msg, "log") || stripos($msg, "reg") || stripos($msg, "register")) {
+                              $snooper->sendMessage($sender->getName() . "> §4Hidden for security reasons");	
+                            } else {
+                              $snooper->sendMessage($sender->getName() . "> " . $msg);
+                            }
+
                           }
-
-                        }
-                          }		
-                        }
-                    }    
+                            }		
+                          }
+                      }    
   
 //    public function onInventoryClose(InventoryCloseEvent $event) {
 //            $player = $event->getPlayer();
