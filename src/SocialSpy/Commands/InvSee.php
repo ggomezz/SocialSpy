@@ -9,7 +9,7 @@ use pocketmine\Player;
 use pocketmine\utils\TextFormat as TF;
 use SocialSpy\SocialSpy;
 
-class ViewInv implements CommandExecutor {
+class InvSee implements CommandExecutor {
         
         private $plugin = null;
         public function __construct(Main $plugin) {
