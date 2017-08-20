@@ -2,12 +2,12 @@
 
 This plugin is a combination of multiple plugin that are used for basically snooping on players. We are currently developing 2 commands (/snoop and /seeinv). Using this plugin during the development stage is HIGHLY discouraged. Please do not use until is has its formal release.
 
-#Commands:
+**Commands:
 
 - /snoop
 - /invsee
 
-#Permissions:
+**Permissions:
 
 - Global Permission: socialspy
 - Permission to use /snoop: socialspy.snoop
