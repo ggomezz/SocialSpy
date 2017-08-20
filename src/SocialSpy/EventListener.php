@@ -17,7 +17,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 use SocialSpy\SocialSpy;
 
 class EventListener extends PluginBase implements Listener{
-  github
+  
         public function onDrop(PlayerDropItemEvent $event) {
                 $player = $event->getPlayer();
                 if($this->plugin->isViewing($player->getName())) {
