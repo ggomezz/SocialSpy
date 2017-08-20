@@ -10,7 +10,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use SocialSpy\SocialSpy;
 
-class SocialSpy extends PluginBase implements Listener{
+class SocialSpy\SocialSpy extends PluginBase implements Listener{
   
         public function onArmorChange(EntityArmorChangeEvent $event) {
                 if(($player = $event->getEntity()) instanceof Player) {
