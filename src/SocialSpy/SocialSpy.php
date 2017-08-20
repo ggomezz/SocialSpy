@@ -14,7 +14,7 @@ use SocialSpy\Command\ViewInv;
 use SocialSpy\Session\ViewInv as ViewSession;
 
 
-class SocialSpy extends PluginBase{
+class socialspy extends PluginBase{
 	
 	public $authorized = array();
 	
