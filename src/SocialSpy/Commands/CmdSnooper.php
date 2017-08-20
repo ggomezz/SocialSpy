@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialSpy\Commands
+namespace SocialSpy\Commands;
   
 use SocialSpy\SocialSpy;
 use pocketmine\plugin\PluginBase;
