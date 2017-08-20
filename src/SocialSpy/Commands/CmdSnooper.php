@@ -2,7 +2,7 @@
 
 namespace SocialSpy\Commands
   
-use SocialSpy\SocialSpy
+use SocialSpy\SocialSpy;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
