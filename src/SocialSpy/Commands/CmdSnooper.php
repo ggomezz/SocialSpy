@@ -19,6 +19,7 @@ class SnoopCommand implements CommandExecutor{
 
         return true;
       }  
+    }
   
 }
 
