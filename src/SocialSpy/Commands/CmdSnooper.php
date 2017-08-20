@@ -9,7 +9,7 @@ use pocketmine\command\Command;
 use pocketmine\Player;
 use pocketmine\command\CommandExecutor;
   
-class SnoopCommand implements CommandExecutor{
+class CmdSnooper implements CommandExecutor{
     public function __construct(SocialSpy $plugin){
       $this->plugin = $plugin;
     }
